@@ -99,7 +99,7 @@ public class Client implements ActionListener{
            }
        });
        
-       t.setInitialDelay(2000);
+       t.setInitialDelay(2000);// 2 second delay to change the status
 
        a1 = new JPanel();
        a1.setBounds(5, 75, 440, 570);
