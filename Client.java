@@ -7,8 +7,8 @@ import java.awt.event.*;
 import java.net.*;
 import java.io.*;
 
-import java.util.Calendar;
-import java.text.SimpleDateFormat;import javax.swing.*;
+
+import javax.swing.*;
 
 public class Client implements ActionListener{
     
@@ -171,26 +171,7 @@ public class Client implements ActionListener{
         }
     }
     
-    public static JPanel formatLabel(String out){
-        JPanel p3 = new JPanel();
-        p3.setLayout(new BoxLayout(p3, BoxLayout.Y_AXIS));
-        
-        JLabel l1 = new JLabel("<html><p style = \"width : 150px\">"+out+"</p></html>");
-        l1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-        l1.setBackground(new Color(37, 211, 102));
-        l1.setOpaque(true);
-        l1.setBorder(new EmptyBorder(15,15,15,50));
-        
-        Calendar cal = Calendar.getInstance();
-        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
-        
-        JLabel l2 = new JLabel();
-        l2.setText(sdf.format(cal.getTime()));
-        
-        p3.add(l1);
-        p3.add(l2);
-        return p3;
-    }
+   
     
     public static void main(String[] args){
         new Client().f1.setVisible(true);
